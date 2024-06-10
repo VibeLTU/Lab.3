@@ -1,0 +1,203 @@
+\doxysection{Struktura.\+h}
+\hypertarget{_struktura_8h_source}{}\label{_struktura_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STRUKTURA\_H\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STRUKTURA\_H\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <Vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <initializer\_list>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <iterator>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}Vector\_template.h"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ Abstract\ base\ class\ for\ a\ person}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_zmogus}{Zmogus}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ vardas;}
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ pavarde;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_zmogus}{Zmogus}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_zmogus}{Zmogus}}(std::string\ vardas1,\ std::string\ pavarde1)\ :\ vardas(vardas1),\ pavarde(pavarde1)\ \{\}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_zmogus}{\string~Zmogus}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ setVardas(std::string\ vardas1)\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ vardas\ =\ vardas1;}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ std::string\ getVardas()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ vardas;}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ setPavarde(std::string\ pavarde1)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ pavarde\ =\ pavarde1;}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ std::string\ getPavarde()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pavarde;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ Pure\ virtual\ functions\ making\ this\ class\ abstract}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ print()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ Derived\ class\ for\ a\ student}}
+\DoxyCodeLine{00051\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_studentas}{Studentas}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_zmogus}{Zmogus}}\ \{}
+\DoxyCodeLine{00052\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_vector}{Vector<double>}}\ nd;}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{double}\ eg;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{double}\ ndvid;}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{double}\ galutinis;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{double}\ mediana;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ Constructors}}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_studentas}{Studentas}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_studentas}{Studentas}}(std::string\ vardas1,\ std::string\ pavarde1,\ \mbox{\hyperlink{class_vector}{Vector<double>}}\ nd1,\ \textcolor{keywordtype}{double}\ eg1,\ \textcolor{keywordtype}{double}\ galutinis1,\ \textcolor{keywordtype}{double}\ median1)}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_zmogus}{Zmogus}}(vardas1,\ pavarde1),\ nd(nd1),\ eg(eg1),\ ndvid(0),\ galutinis(galutinis1),\ mediana(median1)\ \{\}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//\ Destructor}}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{class_studentas}{\string~Studentas}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ Copy\ Constructor}}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_studentas}{Studentas}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_studentas}{Studentas}}\&\ other)}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_zmogus}{Zmogus}}(other.vardas,\ other.pavarde),\ nd(other.nd),\ eg(other.eg),\ ndvid(other.ndvid),\ galutinis(other.galutinis),\ mediana(other.mediana)\ \{\}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ Copy\ Assignment\ Operator}}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{class_studentas}{Studentas}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_studentas}{Studentas}}\&\ other)\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ Zmogus::operator=(other);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ nd\ =\ other.nd;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ eg\ =\ other.eg;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ ndvid\ =\ other.ndvid;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ galutinis\ =\ other.galutinis;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ mediana\ =\ other.mediana;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//\ Move\ Constructor}}
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{class_studentas}{Studentas}}(\mbox{\hyperlink{class_studentas}{Studentas}}\&\&\ other)\ noexcept}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_zmogus}{Zmogus}}(std::move(other)),\ nd(std::move(other.nd)),\ eg(other.eg),\ ndvid(other.ndvid),\ galutinis(other.galutinis),\ mediana(other.mediana)\ \{\}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//\ Move\ Assignment\ Operator}}
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{class_studentas}{Studentas}}\&\ operator=(\mbox{\hyperlink{class_studentas}{Studentas}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ Zmogus::operator=(std::move(other));}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ nd\ =\ std::move(other.nd);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ eg\ =\ other.eg;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ ndvid\ =\ other.ndvid;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ galutinis\ =\ other.galutinis;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ mediana\ =\ other.mediana;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00100\ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ setNd(\mbox{\hyperlink{class_vector}{Vector<double>}}\ nd1)\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ nd\ =\ nd1;}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{class_vector}{Vector<double>}}\ getNd()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ nd;}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ addNd(\textcolor{keywordtype}{double}\ nd1)\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ nd.push\_back(nd1);}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ setEg(\textcolor{keywordtype}{double}\ eg1)\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ eg\ =\ eg1;}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{double}\ getEg()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ eg;}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ setNdvid(\textcolor{keywordtype}{double}\ ndvid1)\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ ndvid\ =\ ndvid1;}
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{double}\ getNdvid()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ndvid;}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ setGalutinis(\textcolor{keywordtype}{double}\ galutinis1)\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ galutinis\ =\ galutinis1;}
+\DoxyCodeLine{00129\ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{double}\ getGalutinis()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ galutinis;}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ setMediana(\textcolor{keywordtype}{double}\ mediana1)\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ mediana\ =\ mediana1;}
+\DoxyCodeLine{00136\ \ \ \ \ \}}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{double}\ getMediana()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mediana;}
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ setEgzFromNd()\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!nd.empty())\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ eg\ =\ nd.back();}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ nd.pop\_back();}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00146\ \ \ \ \ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ calculateNdVid()\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ ndvid\ =\ 0;}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ nd.size();\ j++)\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ ndvid\ +=\ nd[j];}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ ndvid\ /=\ nd.size();}
+\DoxyCodeLine{00154\ \ \ \ \ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//\ Input\ and\ Output\ Operators}}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_studentas}{Studentas}}\&\ studentas)\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ os\ <<\ studentas.vardas\ <<\ \textcolor{charliteral}{'\ '}\ <<\ studentas.pavarde\ <<\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ grade\ :\ studentas.nd)\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ os\ <<\ grade\ <<\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ os\ <<\ studentas.eg;}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keyword}{friend}\ std::istream\&\ operator>>(std::istream\&\ is,\ \mbox{\hyperlink{class_studentas}{Studentas}}\&\ studentas)\ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ is\ >>\ studentas.vardas\ >>\ studentas.pavarde;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ grade;}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (is\ >>\ grade)\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ studentas.nd.push\_back(grade);}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ is;}
+\DoxyCodeLine{00173\ \ \ \ \ \}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ print()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ std::cout\ <<\ vardas\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ pavarde\ <<\ std::endl;}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+\DoxyCodeLine{00178\ \};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \textcolor{comment}{//\ Function\ declarations}}
+\DoxyCodeLine{00181\ \textcolor{keywordtype}{void}\ testInputOutput();}
+\DoxyCodeLine{00182\ \textcolor{keywordtype}{void}\ testConstructor();}
+\DoxyCodeLine{00183\ \textcolor{keywordtype}{void}\ testCopyConstructor();}
+\DoxyCodeLine{00184\ \textcolor{keywordtype}{void}\ testMoveConstructor();}
+\DoxyCodeLine{00185\ \textcolor{keywordtype}{void}\ testCopyAssignment();}
+\DoxyCodeLine{00186\ \textcolor{keywordtype}{void}\ testMoveAssignment();}
+\DoxyCodeLine{00187\ \textcolor{keywordtype}{double}\ median(\mbox{\hyperlink{class_vector}{Vector<double>}}\&\ arr);}
+\DoxyCodeLine{00188\ \textcolor{keywordtype}{void}\ generuotiBalus(\mbox{\hyperlink{class_studentas}{Studentas}}\&\ studentas);}
+\DoxyCodeLine{00189\ \textcolor{keywordtype}{void}\ skaitytiIsFailo(\mbox{\hyperlink{class_vector}{Vector<Studentas>}}\&\ A,\ std::string\&\ failoPavadinimas);}
+\DoxyCodeLine{00190\ \textcolor{keywordtype}{void}\ rikiuotiPagalVarda(\mbox{\hyperlink{class_vector}{Vector<Studentas>}}\&\ A);}
+\DoxyCodeLine{00191\ \textcolor{keywordtype}{void}\ rikiuotiPagalPavarde(\mbox{\hyperlink{class_vector}{Vector<Studentas>}}\&\ A);}
+\DoxyCodeLine{00192\ \textcolor{keywordtype}{void}\ rikiuotiPagalGalutiniVidurki(\mbox{\hyperlink{class_vector}{Vector<Studentas>}}\&\ A);}
+\DoxyCodeLine{00193\ \textcolor{keywordtype}{void}\ rikiuotiPagalMediana(\mbox{\hyperlink{class_vector}{Vector<Studentas>}}\&\ A);}
+\DoxyCodeLine{00194\ \textcolor{keywordtype}{void}\ atspausdintiDuomenis(\mbox{\hyperlink{class_vector}{Vector<Studentas>}}\&\ A,\ \textcolor{keywordtype}{bool}\ iFaila\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00195\ \textcolor{keywordtype}{void}\ generuotiFailaSuStudentais(\textcolor{keywordtype}{int}\ irasuSkaicius);}
+\DoxyCodeLine{00196\ \textcolor{keywordtype}{void}\ rikiuotiStudentus(\mbox{\hyperlink{class_vector}{Vector<Studentas>}}\&\ geri\_studentai,\ \mbox{\hyperlink{class_vector}{Vector<Studentas>}}\&\ blogi\_studentai);}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ STRUKTURA\_H\_INCLUDED}}
+
+\end{DoxyCode}
