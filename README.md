@@ -286,7 +286,7 @@ Vietoj vienos klasės "Studentai" yra dabar sukurtos dvi: bazinė klasė "Zmogus
 
 ##### Ši funkcija pašalina paskutinį elementą iš vektoriaus, sumažindama jo dydį.
 
-### 5. Vektoriaus dydžio nustatymas: `Vector<T>::size() const`
+### 5. `Vector<T>::size() const`
 
 <img src="5.png">
 
