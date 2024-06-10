@@ -261,3 +261,9 @@ Vietoj vienos klasės "Studentai" yra dabar sukurtos dvi: bazinė klasė "Zmogus
 | 10,000            | 0.016862          | 0.004011               |
 | 100,000           | 0.190103          | 0.0320086              |
 | 1,000,000         | 2.22792           | 0.299066               |
+
+### 1. Destruktorius: `Vector<T>::~Vector()`
+
+<img src="1.png">
+
+##### Šis destruktorius atlaisvina dinaminėje atmintyje esančius duomenis, panaikindamas masyvą data.
