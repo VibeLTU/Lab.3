@@ -235,3 +235,29 @@ Vietoj vienos klasės "Studentai" yra dabar sukurtos dvi: bazinė klasė "Zmogus
 | `Vector`                 | 0.0115307 s   | 0.12132 s       | 1.20778 s        |
 
 Šie testai buvo atlikti siekiant palyginti `std::vector` ir `Vector` klasės našumą su įvairiais elementų kiekiais.
+
+# Veikimo našumo palyginimas
+
+## Failo nuskaitymo laikas
+
+| Studentų skaičius | Vector laikas (s) | std::vector laikas (s) |
+|-------------------|-------------------|------------------------|
+| 10,000            | 0.491064          | 0.46234                |
+| 100,000           | 6.22384           | 3.90874                |
+| 1,000,000         | 50.9561           | 41.7636                |
+
+## Rūšiavimo laikas
+
+| Studentų skaičius | Vector laikas (s) | std::vector laikas (s) |
+|-------------------|-------------------|------------------------|
+| 10,000            | 0.0511395         | 0.0110048              |
+| 100,000           | 0.524052          | 0.138026               |
+| 1,000,000         | 5.05731           | 1.7704                 |
+
+## Kategorizavimo laikas
+
+| Studentų skaičius | Vector laikas (s) | std::vector laikas (s) |
+|-------------------|-------------------|------------------------|
+| 10,000            | 0.016862          | 0.004011               |
+| 100,000           | 0.190103          | 0.0320086              |
+| 1,000,000         | 2.22792           | 0.299066               |
