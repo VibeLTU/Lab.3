@@ -267,3 +267,27 @@ Vietoj vienos klasės "Studentai" yra dabar sukurtos dvi: bazinė klasė "Zmogus
 <img src="1.png">
 
 ##### Šis destruktorius atlaisvina dinaminėje atmintyje esančius duomenis, panaikindamas masyvą data.
+
+### 2. `Vector<T>::push_back(const T& value)`
+
+<img src="2.png">
+
+##### Ši funkcija prideda naują elementą į vektorių. Jei dabartinė talpa yra pilna, talpa yra padvigubinama naudojant `reallocate` funkciją. Tada naujas elementas priskiriamas į sekantį laisvą vektoriaus indeksą, padidinant dydį.
+
+### 3. `Vector<T>::push_back(T&& value)`
+
+<img src="3.png">
+
+##### Ši funkcija prideda naują elementą į vektorių naudodama `std::move`, kuris leidžia efektyviai perkelti išteklius iš `value` į vektorių, vietoj kopijavimo.
+
+### 4. `Vector<T>::pop_back()`
+
+<img src="4.png">
+
+##### Ši funkcija pašalina paskutinį elementą iš vektoriaus, sumažindama jo dydį.
+
+### 5. Vektoriaus dydžio nustatymas: `Vector<T>::size() const`
+
+<img src="5.png">
+
+##### Ši funkcija grąžina esamą vektoriaus dydį.
