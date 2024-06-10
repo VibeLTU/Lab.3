@@ -1,6 +1,58 @@
 
 
 # Airidas
+
+# Programos pavadinimas: Vardenis-Pavardenis
+
+Šiame dokumente pateikiamos instrukcijos, kaip atsisiųsti ir įdiegti "Vardenis-Pavardenis" programą.
+
+## Diegimo instrukcijos
+
+### 1. Atsisiųskite diegimo failą
+
+Atsisiųskite diegimo failą **Setup.exe**.   
+
+### 2. Paleiskite diegimo failą
+
+1. Paleiskite atsisiųstą **Setup.exe** failą.
+2. Paspauskite **Next** mygtuką, kad pradėtumėte diegimo procesą.
+
+### 3. Pasirinkite diegimo vietą
+
+1. Kai būsite paprašyti pasirinkti diegimo vietą, įveskite arba pasirinkite šį aplankalą: `C:/Program files/VU/Vardenis-Pavardenis`.
+2. Paspauskite **Next**, kad tęstumėte.
+
+### 4. Sukurkite nuorodas
+
+1. Diegimo proceso metu bus automatiškai sukurtos nuorodos į programos failą:
+   - Darbalaukyje
+   - Start meniu (VU -> Vardenis-Pavardenis)
+
+### 5. Administravimo teisės
+
+1. Diegimo failas automatiškai sukonfigūruos programą, kad ji būtų paleidžiama su administravimo teisėmis.
+2. Užbaikite diegimo procesą paspausdami **Finish**.
+
+## Programos paleidimas
+
+### Darbalaukyje
+
+1. Raskite nuorodą į programą pavadinimu **Vardenis-Pavardenis** savo darbalaukyje.
+2. Dukart spustelėkite nuorodą, kad paleistumėte programą.
+
+### Start meniu
+
+1. Atidarykite **Start meniu**.
+2. Eikite į aplanką **VU** ir pasirinkite **Vardenis-Pavardenis** programą.
+
+Dabar programa yra paruošta naudoti!
+
+## Pagalba
+
+Jei kyla kokių nors problemų ar turite klausimų, prašome kreiptis į pagalbos tarnybą: [airidas.plok5@gmail.com].
+
+---
+
 ## v0.4
 ## Kompiuterio parametrai
 AMD Ryzen 7 5700G  
