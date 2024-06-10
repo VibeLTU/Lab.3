@@ -224,3 +224,14 @@ Taip pat yra ir pridėti įvesties bei išvesties metodu persidengimai.
 
 ### Pakeitimai:   
 Vietoj vienos klasės "Studentai" yra dabar sukurtos dvi: bazinė klasė "Zmogus" (abstrakti, joje objektų kurti negalima) ir jos išvestinė klasė "Studentas".
+
+# Test Results
+
+Šioje lentelėje pateikiami `std::vector` ir `Vector` testų rezultatai su skirtingais elementų skaičiais.
+
+| Testas                   | 1000000 (1M)  | 10000000 (10M)  | 100000000 (100M) |
+|--------------------------|---------------|-----------------|------------------|
+| `std::vector`            | 0.0534922 s   | 0.525543 s      | 5.71249 s        |
+| `Vector`                 | 0.0115307 s   | 0.12132 s       | 1.20778 s        |
+
+Šie testai buvo atlikti siekiant palyginti `std::vector` ir `Vector` klasės našumą su įvairiais elementų kiekiais.
