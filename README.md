@@ -262,7 +262,7 @@ Vietoj vienos klasės "Studentai" yra dabar sukurtos dvi: bazinė klasė "Zmogus
 | 100,000           | 0.190103          | 0.0320086              |
 | 1,000,000         | 2.22792           | 0.299066               |
 
-### 1. Destruktorius: `Vector<T>::~Vector()`
+### 1. `Vector<T>::~Vector()`
 
 <img src="1.png">
 
